@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7576421F-07EA-4A04-BAE0-B11D3FE40D33}</ProjectGuid>
+    <RootNamespace>glWin</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\..\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)\..\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/D "_CRT_SECURE_NO_DEPRECATE" %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;comctl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/D "_CRT_SECURE_NO_DEPRECATE" %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;comctl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/D "_CRT_SECURE_NO_DEPRECATE" %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;comctl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/D "_CRT_SECURE_NO_DEPRECATE" %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;comctl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Bmp.cpp" />
+    <ClCompile Include="CA\AdjacentNeighbors.cpp" />
+    <ClCompile Include="CA\CASimulator.cpp" />
+    <ClCompile Include="CA\Cell.cpp" />
+    <ClCompile Include="CA\Console.cpp" />
+    <ClCompile Include="CA\Display.cpp" />
+    <ClCompile Include="CA\EqualBehaviour.cpp" />
+    <ClCompile Include="CA\Equasion.cpp" />
+    <ClCompile Include="CA\EquasionBehaviour.cpp" />
+    <ClCompile Include="CA\EquasionFactory.cpp" />
+    <ClCompile Include="CA\GreaterThanBehaviour.cpp" />
+    <ClCompile Include="CA\Grid.cpp" />
+    <ClCompile Include="CA\LessThanBehaviour.cpp" />
+    <ClCompile Include="CA\NeighborBehaviour.cpp" />
+    <ClCompile Include="CA\OneDimentionalAdjacentNeighbors.cpp" />
+    <ClCompile Include="CA\OneDimentionalEquasion.cpp" />
+    <ClCompile Include="CA\RandomNumber.cpp" />
+    <ClCompile Include="CA\Segregation.cpp" />
+    <ClCompile Include="CA\SharkFish.cpp" />
+    <ClCompile Include="CA\SurroundingNeighbors.cpp" />
+    <ClCompile Include="CA\SurroundingNeighborsHex.cpp" />
+    <ClCompile Include="CA\SurroundingNeighborsThreeD.cpp" />
+    <ClCompile Include="CA\SurroundingNeighborsTriangle.cpp" />
+    <ClCompile Include="CA\TwoDimentionalEquasion.cpp" />
+    <ClCompile Include="Controller.cpp" />
+    <ClCompile Include="ControllerFormGL.cpp" />
+    <ClCompile Include="ControllerGL.cpp" />
+    <ClCompile Include="ControllerMain.cpp" />
+    <ClCompile Include="DialogWindow.cpp" />
+    <ClCompile Include="FileManager.cpp" />
+    <ClCompile Include="Log.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="ModelGL.cpp" />
+    <ClCompile Include="procedure.cpp" />
+    <ClCompile Include="ViewFormGL.cpp" />
+    <ClCompile Include="ViewGL.cpp" />
+    <ClCompile Include="wcharUtil.cpp" />
+    <ClCompile Include="Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Bmp.h" />
+    <ClInclude Include="CA\AdjacentNeighbors.h" />
+    <ClInclude Include="CA\CASimulator.h" />
+    <ClInclude Include="CA\Cell.h" />
+    <ClInclude Include="CA\Console.h" />
+    <ClInclude Include="CA\Display.h" />
+    <ClInclude Include="CA\EqualBehaviour.h" />
+    <ClInclude Include="CA\Equasion.h" />
+    <ClInclude Include="CA\EquasionBehaviour.h" />
+    <ClInclude Include="CA\EquasionFactory.h" />
+    <ClInclude Include="CA\GreaterThanBehaviour.h" />
+    <ClInclude Include="CA\Grid.h" />
+    <ClInclude Include="CA\LessThanBehaviour.h" />
+    <ClInclude Include="CA\NeighborBehaviour.h" />
+    <ClInclude Include="CA\OneDimentionalAdjacentNeighbors.h" />
+    <ClInclude Include="CA\OneDimentionalEquasion.h" />
+    <ClInclude Include="CA\RandomNumber.h" />
+    <ClInclude Include="CA\Segregation.h" />
+    <ClInclude Include="CA\SharkFish.h" />
+    <ClInclude Include="CA\SurroundingNeighbors.h" />
+    <ClInclude Include="CA\SurroundingNeighborsHex.h" />
+    <ClInclude Include="CA\SurroundingNeighborsThreeD.h" />
+    <ClInclude Include="CA\SurroundingNeighborsTriangle.h" />
+    <ClInclude Include="CA\TwoDimentionalEquasion.h" />
+    <ClInclude Include="Controller.h" />
+    <ClInclude Include="ControllerFormGL.h" />
+    <ClInclude Include="ControllerGL.h" />
+    <ClInclude Include="ControllerMain.h" />
+    <ClInclude Include="Controls.h" />
+    <ClInclude Include="DialogWindow.h" />
+    <ClInclude Include="FileManager.h" />
+    <ClInclude Include="freeglut.h" />
+    <ClInclude Include="freeglut_ext.h" />
+    <ClInclude Include="freeglut_std.h" />
+    <ClInclude Include="glew.h" />
+    <ClInclude Include="GL\freeglut.h" />
+    <ClInclude Include="GL\freeglut_ext.h" />
+    <ClInclude Include="GL\freeglut_std.h" />
+    <ClInclude Include="GL\glut.h" />
+    <ClInclude Include="Log.h" />
+    <ClInclude Include="logResource.h" />
+    <ClInclude Include="ModelGL.h" />
+    <ClInclude Include="procedure.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="ViewFormGL.h" />
+    <ClInclude Include="ViewGL.h" />
+    <ClInclude Include="wcharUtil.h" />
+    <ClInclude Include="Window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="glWin.rc" />
+    <ResourceCompile Include="log.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="glWin.exe.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="freeglut.dll" />
+    <None Include="glew32.dll" />
+    <None Include="Resources\Shaders\basic_shader.fs" />
+    <None Include="Resources\Shaders\basic_shader.vs" />
+    <None Include="songho.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="freeglut.lib" />
+    <Library Include="glew32.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="voxel.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

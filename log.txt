@@ -1,0 +1,6 @@
+===== Log started at 2019-01-17, 19:11:57. =====
+
+19:11:57  Main window is created.
+19:11:57  Created a rendering thread for OpenGL.
+19:11:57  OpenGL window is resized: 796x296.
+19:11:57  OpenGL window is created.
